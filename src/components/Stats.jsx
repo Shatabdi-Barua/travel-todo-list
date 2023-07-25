@@ -1,22 +1,28 @@
-export default function Stats({ items }) {
+import React from "react";
+
+const Stats = ({ items }) => {
   if (!items.length)
     return (
-      <p className="stats">
-        <em>Start adding some items to your packing list 🚀</em>
-      </p>
+      <div>
+        <p className="stats">
+          <em>Start adding some items in your packing list</em>
+        </p>
+      </div>
     );
-
   const numItems = items.length;
-  const numPacked = items.filter((item) => item.packed).length;
-  const percentage = Math.round((numPacked / numItems) * 100);
-
+  const numPackedItems = items.filter((item) => item.packed).length;
+  const percertage = Math.round((numPackedItems / numItems) * 100);
   return (
-    <footer className="stats">
-      <em>
-        {percentage === 100
-          ? "You got everything! Ready to go ✈️"
-          : ` 💼 You have ${numItems} items on your list, and you already packed ${numPacked} (${percentage}%)`}
-      </em>
-    </footer>
+    <div>
+      <p className="stats">
+        <em>
+          {percertage === 100
+            ? "You got everything to go"
+            : `You have total ${numItems} items on your list and you already packed ${numPackedItems} item (${percertage}%)`}
+        </em>
+      </p>
+    </div>
   );
-}
+};
+
+export default Stats;

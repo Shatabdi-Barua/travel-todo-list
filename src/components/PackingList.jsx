@@ -34,7 +34,7 @@ const PackingList = ({ items, onDeleteItem, onToggleItem, onClearList }) => {
           <option value="description">Sort by description</option>
           <option value="packed">Sort by packed status</option>
         </select>
-        <button className="btn btn-outline-warning btn-sm" onClick={onClearList}>
+        <button className="btn btn-outline-danger btn-sm" onClick={onClearList}>
           Clear List
         </button>
       </div>

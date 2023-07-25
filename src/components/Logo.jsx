@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header = () => {
+const Logo = () => {
   return (
     <div className="text-center p-2 topDesign">
       <h1>🏵️ Travel Lists 🏵️</h1>
@@ -8,4 +8,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Logo;

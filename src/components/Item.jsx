@@ -4,7 +4,6 @@ const Item = ({ item, onDeleteItem, onToggleItem }) => {
   return (
     <div>
       <li>
-        {item}
         <input
           type="checkbox"
           value={item.packed}
